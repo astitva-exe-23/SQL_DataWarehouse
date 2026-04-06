@@ -18,6 +18,7 @@ dwh_create_date DATETIME DEFAULT CURRENT_TIMESTAMP
 DROP TABLE IF EXISTS silver_crm_prd_info;
 CREATE TABLE silver_crm_prd_info(
 prd_id	INT,
+cat_id NVARCHAR(50),
 prd_key	NVARCHAR(50),
 prd_nm	NVARCHAR(50),
 prd_cost NVARCHAR(50),
@@ -43,11 +44,11 @@ dwh_create_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 
-DROP TABLE IF EXISTS silver_crm_erp_custaz12;
+DROP TABLE IF EXISTS silver_erp_custaz12;
 CREATE TABLE silver_erp_custaz12(
 cid NVARCHAR(50),
 bdate DATE,
-cntry NVARCHAR(50),
+gender NVARCHAR(50),
 dwh_create_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
